@@ -105,7 +105,7 @@ const js = {
   * If you did not pass the JSON file, it will a default JSON file.
   * @param {string} jsonFile - Relative path to JSON file.
   */
-  loadNames : function(jsonFile='./human.json') {
+  loadNames : function(jsonFile='./node_modules/name-generator/human.json') {
       //Check if file is readable
       try {
         fs.accessSync(jsonFile, fs.constants.R_OK)
@@ -244,8 +244,7 @@ const js = {
   * @param {string} jsonList - JSON list.
   * @param {string} jsonFile - Relative path to JSON file.
   */
-  //./node_modules/name-generator/human.json
-   saveNames : function(jsonList, jsonFile='./human.json') {
+   saveNames : function(jsonList, jsonFile='./node_modules/name-generator/human.json') {
     try {
       //Save the JSON file
       const jsonContent = JSON.stringify(jsonList,null,4)
