@@ -1,0 +1,24 @@
+{
+  "name": "name-generator",
+  "version": "1.0.0",
+  "description": "Name and surname generator.",
+  "main": "name-generator.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/strungle/name-generator.git"
+  },
+  "keywords": [
+    "simulation",
+    "name",
+    "generator"
+  ],
+  "author": "Cid Melges Molina",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/strungle/name-generator/issues"
+  },
+  "homepage": "https://github.com/strungle/name-generator#readme"
+}
