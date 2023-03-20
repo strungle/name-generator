@@ -55,7 +55,7 @@ function randomName(list,branch) {
   * @param {string} list   - JSON list containing male, female and surname.
   * @param {string} branch - Branch could be "male", "female" or surname.
   */
-function randomFullName(jsonList, name, qtyName='1', qtySurname='2') {
+function randomFullName(jsonList, name, qtyName=1, qtySurname=2) {
   if (checkIfJsonHasRightEntries(jsonList) == true) {
     //Get the lenght of name and surnames
     const maxNames = jsonList[name].length
@@ -268,7 +268,7 @@ const js = {
   * @param {string} qtySurname   - How many surnames you want, default is 2, minimum is 0 and maximum is 10.
 
   */
-   generateName : function(jsonList, name, outputFormat='text', qtyName='1', qtySurname='2') {
+   generateName : function(jsonList, name, outputFormat='text', qtyName=1, qtySurname=2) {
      if (outputFormat === 'text' || outputFormat ==='json') {
       if (qtyName > 0 && qtyName <= 10 && qtySurname > 0 && qtySurname <= 10 ) {
         const myName = randomFullName(jsonList, name, qtyName, qtySurname)
@@ -298,7 +298,7 @@ const js = {
   * @param {string} maxQtySurname - Maximum surnames you want, default is 2, minimum is 0 and maximum is 10.
 
   */
-   generateRandomName : function(jsonList, name='any', outputFormat='text', maxQtyName='1', maxQtySurname='2') {
+   generateRandomName : function(jsonList, name='any', outputFormat='text', maxQtyName=1, maxQtySurname=2) {
     if (name === 'male' || name === 'female' || name === 'any' ) {
       if (outputFormat === 'text' || outputFormat ==='json') {
         if (maxQtyName > 0 && maxQtyName <= 10 && maxQtySurname > 0 && maxQtySurname <= 10 ) {
