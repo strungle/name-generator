@@ -269,7 +269,7 @@ const js = {
 
   */
    generateName : function(jsonList, name, outputFormat='text', qtyName=1, qtySurname=2) {
-     if (outputFormat === 'text' || outputFormat ==='json') {
+    if (outputFormat === 'text' || outputFormat ==='json') {
       if (qtyName > 0 && qtyName <= 10 && qtySurname >= 0 && qtySurname <= 10 ) {
         const myName = randomFullName(jsonList, name, qtyName, qtySurname)
         if (outputFormat === 'text') {
@@ -278,7 +278,7 @@ const js = {
           return JSON.stringify(myName,null,4)
         }
       } else {
-        throw Error(`The "qtyName" or "qtySurname" cannot exceed 10 each and cannot be null and must be at least 1.`)
+        throw Error(`The "qtyName" or "qtySurname" cannot exceed 10 each and cannot be null and must be at least 1 name and 0 surname.`)
       }
     } else {
       throw Error(`The "outputFormat" parameter option must be "json" or "text".`)
@@ -301,7 +301,7 @@ const js = {
    generateRandomName : function(jsonList, name='any', outputFormat='text', maxQtyName=1, maxQtySurname=2) {
     if (name === 'male' || name === 'female' || name === 'any' ) {
       if (outputFormat === 'text' || outputFormat ==='json') {
-        if (maxQtyName > 0 && maxQtyName <= 10 && maxQtySurname > 0 && maxQtySurname <= 10 ) {
+        if (maxQtyName > 0 && maxQtyName <= 10 && maxQtySurname >= 0 && maxQtySurname <= 10 ) {
           //If name is "any", then it will be random between 1 and 2. 1 = male, 2 = female
           let gender, aux
           if (name === 'any') {
