@@ -14,7 +14,6 @@ function checkIfJsonHasRightEntries(jsonList) {
   }
 }
 
-
 /**
   * Captalize the first letter of the name and lowercase other letters.
   * @param {string} name - Name to captalize the first letter.
