@@ -317,7 +317,11 @@ const js = {
           //Random a quantity for name and surname
           aux = randomNumber(maxQtyName)
           let qtyName = aux
-          aux = randomNumber(maxQtySurname)
+          if (maxQtySurname > 0) {
+            aux = randomNumber(maxQtySurname)
+          } else {
+            aux = 0
+          }
           let qtySurname = aux
           //Finally random a new name!
           const myName = randomFullName(jsonList, gender, qtyName, qtySurname)
@@ -327,7 +331,7 @@ const js = {
             return JSON.stringify(myName,null,4)
           }
         } else {
-          throw Error(`The "maxQtyName" or "maxQtySurname" cannot exceed 10 each and cannot be null and must be at least 1.`)
+          throw Error(`The "maxQtyName" or "maxQtySurname" cannot exceed 10 each and cannot be null and name must be at least 1 and surname at least 0.`)
         }
       } else {
         throw Error(`The "outputFormat" parameter option must be "json" or "text".`)
