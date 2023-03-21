@@ -303,13 +303,17 @@ const js = {
       if (outputFormat === 'text' || outputFormat ==='json') {
         if (maxQtyName > 0 && maxQtyName <= 10 && maxQtySurname > 0 && maxQtySurname <= 10 ) {
           //If name is "any", then it will be random between 1 and 2. 1 = male, 2 = female
-          let aux = randomNumber(2)
           let gender
-          if (aux === 1) { //male
-             gender = 'male'
+          if (name === 'any') {
+            let aux = randomNumber(2)
+            if (aux === 1) { //male
+              gender = 'male'
+            } else {
+              gender = 'female'
+            }
           } else {
-            gender = 'female'
-          }
+            gender = name
+          }          
           //Random a quantity for name and surname
           aux = randomNumber(maxQtyName)
           let qtyName = aux
