@@ -278,7 +278,7 @@ const js = {
           return JSON.stringify(myName,null,4)
         }
       } else {
-        throw Error(`The "qtyName" or "qtySurname" cannot exceed 10 each and cannot be null.`)
+        throw Error(`The "qtyName" or "qtySurname" cannot exceed 10 each and cannot be null and must be at least 1.`)
       }
     } else {
       throw Error(`The "outputFormat" parameter option must be "json" or "text".`)
@@ -323,7 +323,7 @@ const js = {
             return JSON.stringify(myName,null,4)
           }
         } else {
-          throw Error(`The "maxQtyName" or "maxQtySurname" cannot exceed 10 each and cannot be null.`)
+          throw Error(`The "maxQtyName" or "maxQtySurname" cannot exceed 10 each and cannot be null and must be at least 1.`)
         }
       } else {
         throw Error(`The "outputFormat" parameter option must be "json" or "text".`)
