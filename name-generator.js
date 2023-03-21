@@ -270,7 +270,7 @@ const js = {
   */
    generateName : function(jsonList, name, outputFormat='text', qtyName=1, qtySurname=2) {
      if (outputFormat === 'text' || outputFormat ==='json') {
-      if (qtyName > 0 && qtyName <= 10 && qtySurname > 0 && qtySurname <= 10 ) {
+      if (qtyName > 0 && qtyName <= 10 && qtySurname >= 0 && qtySurname <= 10 ) {
         const myName = randomFullName(jsonList, name, qtyName, qtySurname)
         if (outputFormat === 'text') {
           return myName.name.join(' ') + ' ' + myName.surname.join(' ')
