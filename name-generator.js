@@ -303,7 +303,7 @@ const js = {
       if (outputFormat === 'text' || outputFormat ==='json') {
         if (maxQtyName > 0 && maxQtyName <= 10 && maxQtySurname > 0 && maxQtySurname <= 10 ) {
           //If name is "any", then it will be random between 1 and 2. 1 = male, 2 = female
-          let gender
+          let gender, aux
           if (name === 'any') {
             let aux = randomNumber(2)
             if (aux === 1) { //male
