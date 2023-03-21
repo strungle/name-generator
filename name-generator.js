@@ -256,7 +256,7 @@ const js = {
   },
   /**
   * Generate a random name from male, female or surname.
-  * If you ask to generate 3 names, then you must have at least 2 names, but cannot exceed 10 per each type.
+  * If you ask to generate 3 names, then you must have at least 3 names, but cannot exceed 10 per each type.
   * Example: If you have 3 female names but asked to generate 4 female names, it will throw an error! 
   * If you ask to generate 2 male names and 2 surnames, the output will be like "Alex Andie Merna Abbott".
   * The name and surname will not repeat itself.
@@ -286,7 +286,7 @@ const js = {
   },
   /**
   * Generate a fully random within male or female.
-  * If you ask to generate 3 names, then you must have at least 2 names, but cannot exceed 10 per each type.
+  * If you ask to generate 3 names, then you must have at least 3 names, but cannot exceed 10 per each type.
   * Example: If you have 3 female names but asked to generate 4 female names, it will throw an error! 
   * If you ask to generate 2 male names and 2 surnames, the output will be like "Alex Andie Merna Abbott".
   * The name and surname will not repeat itself.
