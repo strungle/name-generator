@@ -340,6 +340,54 @@ const js = {
       throw Error(`The "name" parameter option must be "male", "female" or "any".`)
     }    
  },
+ /**
+  * Show how many male, female and surnames exists in JSON.
+  * The output will be returned in JSON.
+  * 
+  * @param {string} list          - JSON list.
+  */
+  statistic : function(jsonList) {
+    if (checkIfJsonHasRightEntries(jsonList) == true) {
+      //Count all branches
+      const totalMale = jsonList['male'].length
+      const totalFemale = jsonList['female'].length
+      const totalSurname = jsonList['surname'].length 
+      //Create the percentage from each branch
+      const totalJsonList = totalMale + totalFemale + totalSurname
+      let percentMale, percentFemale, percentSurname
+      if (totalMale === 0) {
+        percentMale = 0
+      } else {
+        percentMale = Number((totalMale * 100) / totalJsonList).toFixed(2)
+      }
+      if (totalFemale === 0) {
+        percentFemale = 0
+      } else {
+        percentFemale = Number((totalFemale * 100) / totalJsonList).toFixed(2)
+      }
+      if (totalSurname === 0) {
+        percentSurname = 0
+      } else {
+        percentSurname = Number((totalSurname * 100) / totalJsonList).toFixed(2)
+      }
+      //Generate the JSON
+      const finalJsonName = ({
+        "lenght": {
+          "male": totalMale,
+          "female": totalFemale,
+          "surname": totalSurname
+        },
+        "percent": {
+          "male": percentMale,
+          "female": percentFemale,
+          "surname": percentSurname
+        }
+      })
+      return finalJsonName
+    } else {
+        throw Error(`Json entry does not have male, female and surname properties.`)
+    }
+ },
 }
 
 module.exports = js
